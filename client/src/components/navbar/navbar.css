@@ -1,0 +1,105 @@
+html,body{
+  padding: 0%;
+  margin: 0%;
+  overflow-x: hidden;
+}
+
+.navbarContainer{
+    width: 100vw;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    z-index: 5;
+}
+.navbarLeftContainer{
+    width: calc(70vw - 30px);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+    align-items: center;
+}
+.hamburgerMenuIconTop {
+    width: 32px;
+    background-color: white;
+    height: 4px;
+    cursor: pointer;
+  }
+  .hamburgerMenuIconMiddle {
+    width: 25px;
+    background-color: white;
+    height: 4px;
+    margin: 0.4vh;
+  }
+  .hamburgerMenuIconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .hamburgerMenuIconBottom {
+    background-color: white;
+    width: 32px;
+    height: 4px;
+  }
+  .navbarRightContainer{
+      width: 30vw;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  }
+  .hamburgerMenuIconContainer{
+      margin-left:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  ul{
+      width: 70%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      transition: all 0.65s linear;
+
+  }
+.collapsedHamburgerMenuIconMiddle {
+    width: 25px;
+    background-color: white;
+    height: 4px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100vw);     
+}
+.collapsedHamburgerMenuIconBottom {
+    width: 32px;
+  background-color: white;
+  height: 4px;
+  transition: all 0.5s ease-in-out;
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translateY(5px) translateX(-1px);
+  z-index: 2;
+}
+.hiddenHamburgerMenuContainer {
+    width: 100vw;
+    height: 20vh;
+    right: 0px;
+    position: absolute;                  
+    background-color: #333;
+    top: -85vh;
+    transition: all 0.75s ease-in-out;
+    z-index: 1;
+  }
+  .expandedHamburgerMenuContainer {
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    top: 0vh;
+    right: 0px;
+    background-color: #222;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  .whiteListContainer{
+      color: #F49A67;
+  }
