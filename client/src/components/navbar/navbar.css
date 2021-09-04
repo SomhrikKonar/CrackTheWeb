@@ -1,105 +1,145 @@
-html,body{
+html,
+body {
   padding: 0%;
   margin: 0%;
   overflow-x: hidden;
 }
 
-.navbarContainer{
-    width: 100vw;
-    height: 80px;
-    background-color: transparent;
-    display: flex;
-    z-index: 5;
+.navbarContainer {
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  z-index: 5;
 }
-.navbarLeftContainer{
-    width: calc(70vw - 30px);
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 10px;
-    align-items: center;
+.navbarLeftContainer {
+  width: calc(70vw - 30px);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 10px;
+  align-items: center;
 }
 .hamburgerMenuIconTop {
-    width: 32px;
-    background-color: white;
-    height: 4px;
-    cursor: pointer;
-  }
-  .hamburgerMenuIconMiddle {
-    width: 25px;
-    background-color: white;
-    height: 4px;
-    margin: 0.4vh;
-  }
-  .hamburgerMenuIconContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    z-index: 999;
-  }
-  .hamburgerMenuIconBottom {
-    background-color: white;
-    width: 32px;
-    height: 4px;
-  }
-  .navbarRightContainer{
-      width: 30vw;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-  }
-  .hamburgerMenuIconContainer{
-      margin-left:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  ul{
-      width: 70%;
-      list-style-type: none;
-      display: flex;
-      justify-content: space-around;
-      transition: all 0.65s linear;
-
-  }
-.collapsedHamburgerMenuIconMiddle {
-    width: 25px;
-    background-color: white;
-    height: 4px;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-100vw);     
-}
-.collapsedHamburgerMenuIconBottom {
-    width: 32px;
+  width: 32px;
   background-color: white;
   height: 4px;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
+}
+.hamburgerMenuIconMiddle {
+  width: 25px;
+  background-color: white;
+  height: 4px;
+  margin: 0.4vh;
+  transition: all 0.3s ease-in-out;
+}
+.hamburgerMenuIconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+.hamburgerMenuIconBottom {
+  background-color: white;
+  width: 32px;
+  height: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.navbarRightContainer {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hamburgerMenuIconContainer {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+ul {
+  width: 70%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.65s linear;
+}
+.collapsedHamburgerMenuIconTop {
+  width: 32px;
+  background-color: white;
+  height: 4px;
+  cursor: pointer;
+  transform-origin: 0 0;
+  transform: rotate(45deg) translateY(-11px) translateX(-3px);
+  transition: all 0.5s ease-in-out;
+}
+.collapsedHamburgerMenuIconMiddle {
+  width: 25px;
+  background-color: white;
+  height: 4px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100vw);
+}
+.collapsedHamburgerMenuIconBottom {
+  width: 32px;
+  background-color: white;
+  height: 4px;
   transform-origin: 0 0;
   transform: rotate(-45deg) translateY(5px) translateX(-1px);
   z-index: 2;
+  transition: all 0.5s ease-in-out;
 }
 .hiddenHamburgerMenuContainer {
-    width: 100vw;
-    height: 20vh;
-    right: 0px;
-    position: absolute;                  
-    background-color: #333;
-    top: -85vh;
-    transition: all 0.75s ease-in-out;
-    z-index: 1;
+  width: 100vw;
+  height: 20vh;
+  right: 0px;
+  position: absolute;
+  background-color: #333;
+  top: -85vh;
+  transition: all 0.75s ease-in-out;
+  z-index: 1;
+}
+.expandedHamburgerMenuContainer {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  top: 0vh;
+  right: 0px;
+  background-color: #222;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.whiteListContainer {
+  color: #f49a67;
+}
+@media screen and (max-width: 480px) {
+  .navbarLeftContainer {
+    flex-direction: column;
+    padding-top: 25px;
+    align-items: flex-start;
   }
-  .expandedHamburgerMenuContainer {
-    width: 100vw;
-    height: 80vh;
-    position: absolute;
-    top: 0vh;
-    right: 0px;
-    background-color: #222;
-    transition: all 0.5s;
-    z-index: -1;
+  h3 {
+    color: #fff;
   }
-  .whiteListContainer{
-      color: #F49A67;
+  ul {
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.65s linear;
+    color: #f49a67;
+    text-align: center;
   }
+  .whiteListContainer {
+    opacity: 1;
+  }
+  li {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+}
