@@ -1,0 +1,121 @@
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+.modalDarkOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+  width: 60vw;
+  z-index: 101;
+  background-color: #fff;
+}
+.closeModal {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 102;
+}
+.modalLeftContainer,
+.modalRightContainer {
+  width: 50%;
+  height: 100%;
+  transition: left 500ms linear;
+  position: absolute;
+}
+.modalLeftContainer {
+  padding: 0 20px;
+}
+.modalRightContainer {
+  left: 50%;
+}
+.moveLeft {
+  left: 0;
+}
+.moveRight {
+  left: 50%;
+}
+.form {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.formHeader {
+  margin-bottom: 30px;
+  letter-spacing: 1.1px;
+  font-size: 24px;
+}
+.formField {
+  width: 70%;
+  margin-bottom: 15px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 15px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #111;
+  transition: all 500ms ease-in;
+  transition-delay: 500ms;
+}
+.formSubmitButton {
+  width: 70%;
+  margin: 15px 0 10px 0;
+  padding: 6px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.forgotPassword {
+  width: 70%;
+  text-align: right;
+  font-size: 12px;
+  margin-top: 20px;
+  height: 15px;
+  transition: all 500ms ease-in;
+  transition-delay: 500ms;
+}
+.forgotPassword,
+.createAccount,
+.formSubmitButton {
+  cursor: pointer;
+}
+.fieldVisible {
+  opacity: 1;
+}
+.fieldHidden {
+  opacity: 0;
+  height: 0 !important;
+  margin-bottom: 0;
+}
+.interestedInField {
+  width: 70%;
+  margin-bottom: 10px;
+  transition: all 500ms ease-in;
+  height: 80px;
+  overflow: hidden;
+  transition-delay: 500ms;
+}
+.interestedIn {
+  font-size: 18px;
+  font-weight: 600;
+}
+.checkboxesContainer {
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+.checkboxContainer {
+  margin-right: 20px;
+}
+label {
+  margin-left: 5px;
+}

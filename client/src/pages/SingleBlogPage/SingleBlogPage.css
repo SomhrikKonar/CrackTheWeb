@@ -1,0 +1,22 @@
+.blogPageContainer {
+  padding: 0 20px;
+}
+.blogHeader {
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+.blogBody {
+  flex-direction: column;
+}
+.text {
+  width: 100%;
+  margin-bottom: 15px;
+  white-space: pre-line;
+}
+.imageContainer {
+  max-height: 400px;
+  max-width: 600px;
+}

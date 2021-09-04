@@ -11,11 +11,13 @@ router.route("/addBlog").post((req, res) => {
   const description = req.body.description;
   const editor = req.body.editor;
   const createdBy = req.body.createdBy;
+  const keyword = req.body.keyword;
   const blog = new Post({
     title: title,
     description: description,
     editor: editor,
     createdBy: createdBy,
+    keyword: keyword,
   });
 
   Post.create(blog)

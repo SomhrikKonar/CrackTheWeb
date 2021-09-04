@@ -1,91 +1,92 @@
-.landingPageArc{
-    position: absolute;
-    width:95vw;
-    height: 146vh;
-    right: 0px;
-    transform: translate(20%,-50%);
-    background-color:  #F49A67 ;
-    border-radius: 50%;
-    z-index: -1;
+.landingPageArc {
+  position: absolute;
+  width: 95vw;
+  height: 146vh;
+  right: 0px;
+  transform: translate(20%, -50%);
+  background-color: #f49a67;
+  border-radius: 50%;
+  z-index: -1;
 }
-.centerImage{
-    position: absolute;
-    bottom: 0px;
-    transform: translateY(45%) translateX(50%);
-    right: 50%;
-    max-width: 190px;
-    max-height: 200px;
+.centerImage {
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(45%) translateX(50%);
+  right: 50%;
+  max-width: 190px;
+  max-height: 200px;
 }
-.circularImageCarousel{
-    position: absolute;
-    bottom: 0px;
-    right: 50%; 
-    width: 40%;
-    height: 500px;
-    transform: translateY(40%) translateX(50%);
-    /* border: 4px solid black; */
-    border-radius: 50%;
+.circularImageCarousel {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  width: 40%;
+  height: 500px;
+  transform: translateY(40%) translateX(50%);
+  /* border: 4px solid black; */
+  border-radius: 50%;
 }
 
-.circularImageCarousel img, .circularImageCarousel svg{
-    width: 150px;
-    height: 140px;
+.circularImageCarousel img,
+.circularImageCarousel svg {
+  width: 120px;
+  height: 120px;
 }
-.randomImageOne{
-    position: absolute;
-    top: 0px;
-    transform: translateY(-40%) translateX(50%);
-    right: 50%;   
+.randomImageOne {
+  position: absolute;
+  top: 0px;
+  transform: translateY(-60%) translateX(50%);
+  right: 50%;
 }
-.randomImageTwo{
-    position: absolute;
-    top:0%;
-    right: 0%;   
-    filter: drop-shadow(-5px 0px 4px black);
+.randomImageTwo {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  filter: drop-shadow(-5px 0px 4px rgba(0, 0, 0, 0.685));
 }
-.randomImageThree{
-    position: absolute;
-    top: 0%;
-    left: 0%;   
-    filter: drop-shadow(-5px 0px 6px black);
+.randomImageThree {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  filter: drop-shadow(-5px 0px 4px rgba(0, 0, 0, 0.685));
 }
-.randomImageFour{
-    position: absolute;
-    transform: translateX(-40%);
-    top: 38%;
-    left: 0%; 
-    filter: drop-shadow(-5px 0px 6px black);
+.randomImageFour {
+  position: absolute;
+  transform: translateX(-40%);
+  top: 38%;
+  left: 0%;
+  filter: drop-shadow(-5px 0px 4px rgba(0, 0, 0, 0.685));
 }
-.randomImageFive{
-    position: absolute;
-    transform: translateX(40%);
-    top: 40%;
-    right: 0%; 
-    filter: drop-shadow(-5px 0px 6px black);
+.randomImageFive {
+  position: absolute;
+  transform: translateX(40%);
+  top: 40%;
+  right: 0%;
+  filter: drop-shadow(-5px 0px 4px rgba(0, 0, 0, 0.685));
 }
-.circularImageCarousel button{
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    max-height: 70px;
-    max-width: 70px;
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  #f08649 ;
-    cursor: pointer;
+.circularImageCarousel button {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  max-height: 70px;
+  max-width: 70px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f08649;
+  cursor: pointer;
 }
-.circularImageCarouselPrev{
-    position: absolute;
-    transform: translateX(-40%);
-    bottom: 2%;
-    left: 0%; 
+.circularImageCarouselPrev {
+  position: absolute;
+  transform: translateX(-40%);
+  bottom: 2%;
+  left: 0%;
 }
-.circularImageCarouselNext{
-    position: absolute;
-    transform: translateX(40%);
-    bottom: 2%;
-    right: 0%; 
+.circularImageCarouselNext {
+  position: absolute;
+  transform: translateX(40%);
+  bottom: 2%;
+  right: 0%;
 }

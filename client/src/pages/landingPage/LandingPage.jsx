@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./landingPage.css";
 import Navbar from "../../components/navbar/Navbar";
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import ArrowDownward from "@material-ui/icons/ArrowDownward";
+import Login from "../../components/loginModal/login";
 export default function LandingPage() {
+  const [showLogin, setShowLogin] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLogin(true);
+    }, 5000);
+  }, []);
+
+  function closeModal() {
+    setShowLogin(false);
+  }
   return (
     <>
       <div className="landingPageContainer">
@@ -72,13 +84,26 @@ c-38 0 -68 3 -68 6 0 4 54 83 120 175 66 93 123 175 126 183 3 8 -44 80 -110
               className="randomImageFive"
               id="CSSImg"
             />
-            <button className="circularImageCarouselPrev"><ArrowUpwardIcon style={{width:"60%",color:"white"}}/></button>
-            <button className="circularImageCarouselNext"><ArrowDownward style={{width:"60%",color:"white"}}/></button>
+            <button className="circularImageCarouselPrev">
+              <ArrowUpwardIcon style={{ width: "60%", color: "white" }} />
+            </button>
+            <button className="circularImageCarouselNext">
+              <ArrowDownward style={{ width: "60%", color: "white" }} />
+            </button>
           </div>
         </div>
         <div className="navbarContainer">
           <Navbar />
         </div>
+        {showLogin && (
+          <div className="loginModal">
+            <div
+              className="modalDarkOverlay"
+              onClick={() => setShowLogin(false)}
+            />
+            <Login closeModal={closeModal} />
+          </div>
+        )}
       </div>
     </>
   );

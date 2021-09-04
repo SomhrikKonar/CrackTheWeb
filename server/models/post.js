@@ -21,11 +21,17 @@ const postSchema = mongoose.Schema({
     trim: true,
     required: true,
   },
+  keyword: {
+    type: String,
+    trim: true,
+    required: true,
+  },
   editor: [
     {
       imageName: { type: String, trim: true },
       imageLink: { type: String },
       text: { type: String, trim: true },
+      type: { type: String, trim: true },
       styles: {
         type: Array,
       },
